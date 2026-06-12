@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaMapMarkerAlt, FaEnvelope, FaPhone,
-  FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok, FaYoutube,
+  FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube,
   FaChevronRight, FaTimes,
 } from 'react-icons/fa';
 import './navbar.css';
@@ -16,11 +16,10 @@ const navLinks = [
 ];
 
 const socials = [
-  { Icon: FaFacebookF, label: 'Facebook' },
-  { Icon: FaLinkedinIn, label: 'LinkedIn' },
-  { Icon: FaInstagram, label: 'Instagram' },
-  { Icon: FaTiktok, label: 'TikTok' },
-  { Icon: FaYoutube, label: 'YouTube' },
+  { Icon: FaFacebookF, label: 'Facebook', url: 'https://www.facebook.com/meglogisticsllc/' },
+  { Icon: FaInstagram, label: 'Instagram', url: 'https://www.instagram.com/meglogisticsllc/' },
+  { Icon: FaYoutube, label: 'YouTube', url: 'https://www.youtube.com/@MegLogisticsLLC' },
+  { Icon: FaLinkedinIn, label: 'LinkedIn', url: 'https://www.linkedin.com/in/ejaz-ahmad-897606405/' },
 ];
 
 export default function Navbar() {
@@ -60,8 +59,8 @@ export default function Navbar() {
                 </a>
               </div>
               <div className="topbar-socials">
-                {socials.map(({ Icon, label }) => (
-                  <a key={label} href="#" className="topbar-social-link" aria-label={label}><Icon /></a>
+                {socials.map(({ Icon, label, url }) => (
+                  <a key={label} href={url} className="topbar-social-link" aria-label={label} target="_blank" rel="noreferrer"><Icon /></a>
                 ))}
               </div>
             </div>
@@ -140,8 +139,8 @@ export default function Navbar() {
           </div>
 
           <div className="mobile-menu-socials">
-            {socials.map(({ Icon, label }) => (
-              <a key={label} href="#" aria-label={label}><Icon /></a>
+            {socials.map(({ Icon, label, url }) => (
+              <a key={label} href={url} aria-label={label} target="_blank" rel="noreferrer"><Icon /></a>
             ))}
           </div>
         </div>
