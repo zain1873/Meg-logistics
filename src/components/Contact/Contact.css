@@ -1,0 +1,394 @@
+/* ══════════════════════════════════════
+   CONTACT SECTION
+══════════════════════════════════════ */
+.ct-section {
+  background: var(--light-gray, #f5f5f5);
+  padding: 90px 20px;
+  scroll-margin-top: 110px;
+}
+
+.ct-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.ct-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.ct-tag {
+  display: inline-block;
+  background: rgba(34, 117, 147, 0.12);
+  color: var(--theme-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.ct-title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.ct-sub {
+  color: #5a6b7a;
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════════════
+   CARD (two columns)
+══════════════════════════════════════ */
+.ct-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(12, 36, 72, 0.12);
+}
+
+/* ══════════════════════════════════════
+   LEFT — INFO PANEL
+══════════════════════════════════════ */
+.ct-info {
+  background: var(--secondary-color);
+  padding: 52px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.ct-info-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.ct-info-desc {
+  color: rgba(198, 205, 208, 0.78);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 38px;
+  position: relative;
+  z-index: 1;
+}
+
+.ct-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.ct-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ct-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: var(--theme-color);
+  color: #fff;
+  font-size: 17px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.ct-info-item:hover .ct-info-icon {
+  transform: translateY(-3px);
+}
+
+.ct-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 2px;
+}
+
+.ct-info-label {
+  color: rgba(198, 205, 208, 0.55);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ct-info-value {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.ct-info-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ct-info-link:hover {
+  color: var(--theme-color);
+}
+
+/* ══════════════════════════════════════
+   RIGHT — FORM PANEL
+══════════════════════════════════════ */
+.ct-form-panel {
+  background: #fff;
+  padding: 52px 48px;
+}
+
+.ct-form-title {
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 28px;
+}
+
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Two-column row */
+.ct-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ct-label {
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.ct-label span {
+  color: var(--theme-color);
+}
+
+/* Shared input styles */
+.ct-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #dde3e7;
+  border-radius: 10px;
+  font-size: 14.5px;
+  color: var(--secondary-color);
+  background: #f8fafc;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.ct-input::placeholder {
+  color: #aab4bb;
+}
+
+.ct-input:focus {
+  border-color: var(--theme-color);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(34, 117, 147, 0.12);
+}
+
+.ct-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23227593' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.ct-textarea {
+  resize: vertical;
+  min-height: 138px;
+  line-height: 1.6;
+}
+
+/* Submit */
+.ct-submit {
+  width: 100%;
+  background: var(--theme-color);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+  box-shadow: 0 8px 22px rgba(12, 36, 72, 0.28);
+  transition: background 0.3s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.ct-submit:hover:not(:disabled) {
+  background: var(--theme-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(34, 117, 147, 0.38);
+}
+
+.ct-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Spinner animation */
+.ct-spinner {
+  animation: ctSpin 0.8s linear infinite;
+}
+
+@keyframes ctSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Success state ── */
+.ct-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 380px;
+  gap: 14px;
+  padding: 20px;
+}
+
+.ct-success-icon {
+  color: var(--theme-color);
+  font-size: 60px;
+}
+
+.ct-success h3 {
+  color: var(--secondary-color);
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.ct-success p {
+  color: #5a6b7a;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 340px;
+  margin: 0;
+}
+
+.ct-reset-btn {
+  margin-top: 8px;
+  background: var(--theme-color);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.ct-reset-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 960px) {
+  .ct-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-info {
+    padding: 44px 36px;
+  }
+
+  .ct-info-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .ct-info-item {
+    flex: 1 1 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .ct-section {
+    padding: 60px 16px;
+  }
+
+  .ct-title {
+    font-size: 28px;
+  }
+
+  .ct-card {
+    border-radius: 14px;
+  }
+
+  .ct-form-panel {
+    padding: 36px 24px;
+  }
+
+  .ct-info {
+    padding: 36px 24px;
+  }
+
+  .ct-info-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .ct-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-info-item {
+    flex: 1 1 100%;
+  }
+}

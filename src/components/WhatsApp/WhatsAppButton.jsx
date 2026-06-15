@@ -3,8 +3,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import './WhatsAppButton.css';
 
 // Set your WhatsApp number here (international format, no + or spaces)
-const PHONE_NUMBER = '13074001222';
-const DEFAULT_MESSAGE = 'Hello! I would like to know more about Flux Freight LLC services.';
+const PHONE_NUMBER = '923070509269';
+const DEFAULT_MESSAGE = 'Hello! I would like to know more about Meg Logistics LLC services.';
 
 export default function WhatsAppButton() {
   const link = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;

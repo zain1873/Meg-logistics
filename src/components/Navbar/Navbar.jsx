@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaMapMarkerAlt, FaEnvelope, FaPhone,
   FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube,
   FaChevronRight, FaTimes,
 } from 'react-icons/fa';
-import './navbar.css';
+import './Navbar.css';
 
 const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'What We Offer', path: '/what-we-offer' },
-  { label: 'Industries We Serve', path: '/industries' },
-  { label: 'Why Flux Freight LLC?', path: '/why-us' },
-  { label: 'Contact Us', path: '/contact' },
+  { label: 'Home', href: '#top' },
+  { label: 'What We Offer', href: '#what-we-offer' },
+  { label: 'Industries We Serve', href: '#industries' },
+  { label: 'Why Meg Logistics LLC?', href: '#why-us' },
+  { label: 'Contact Us', href: '#contact' },
 ];
 
 const socials = [
@@ -24,18 +24,44 @@ const socials = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden]     = useState(false);
+  const prevScrollY             = useRef(0);
+  const menuOpenRef             = useRef(false);
+
+  // Keep ref in sync so scroll handler can read it without stale closure
+  menuOpenRef.current = menuOpen;
 
   // Lock body scroll while the menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
+    if (menuOpen) setHidden(false); // always reveal navbar when menu opens
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
+
+  // Hide on scroll-down, reveal on scroll-up
+  useEffect(() => {
+    const onScroll = () => {
+      if (menuOpenRef.current) return;
+      const currentY = window.scrollY;
+      if (currentY < 10) {
+        setHidden(false);
+      } else if (currentY > prevScrollY.current && currentY > 80) {
+        setHidden(true);
+      } else if (currentY < prevScrollY.current) {
+        setHidden(false);
+      }
+      prevScrollY.current = currentY;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <nav className="navbar-wrapper">
+      <div className="navbar-spacer" />
+      <nav className={`navbar-wrapper${hidden ? ' navbar--hidden' : ''}`}>
         <div className="navbar-container">
 
           {/* ── Logo (spans full height) ── */}
@@ -49,13 +75,22 @@ export default function Navbar() {
             {/* Top info bar */}
             <div className="navbar-topbar">
               <div className="topbar-contact">
-                <a href="https://maps.google.com" className="topbar-item" target="_blank" rel="noreferrer">
+                <a href="https://maps.google.com/?q=Denver,Colorado" className="topbar-item" target="_blank" rel="noreferrer">
                   <FaMapMarkerAlt className="topbar-icon" />
-                  <span>30 N Gould ST, Sheridan WY 82801</span>
+                  <span>Denver, Colorado</span>
                 </a>
-                <a href="mailto:Info@fluxfreightllc.com" className="topbar-item">
+             
+                <span className="topbar-divider" />
+                <a href="tel:+13074001222" className="topbar-item">
+                  <FaPhone className="topbar-icon" />
+                  <span>(307) 400-1222</span>
+                </a>
+                <span className="topbar-divider" />
+
+                <span className="topbar-divider" />
+                <a href="mailto:Info@meglogistics.com" className="topbar-item">
                   <FaEnvelope className="topbar-icon" />
-                  <span>Info@fluxfreightllc.com</span>
+                  <span>Info@meglogistics.com</span>
                 </a>
               </div>
               <div className="topbar-socials">
@@ -69,8 +104,8 @@ export default function Navbar() {
             <div className="navbar-nav">
               <ul className="navbar-links">
                 {navLinks.map(link => (
-                  <li key={link.path}>
-                    <Link to={link.path} className="nav-link">{link.label}</Link>
+                  <li key={link.href}>
+                    <a href={link.href} className="nav-link">{link.label}</a>
                   </li>
                 ))}
               </ul>
@@ -111,16 +146,16 @@ export default function Navbar() {
 
         <nav className="mobile-menu-links">
           {navLinks.map((link, i) => (
-            <Link
-              key={link.path}
-              to={link.path}
+            <a
+              key={link.href}
+              href={link.href}
               className="mobile-menu-link"
               style={{ '--i': i }}
               onClick={closeMenu}
             >
               <span>{link.label}</span>
               <FaChevronRight className="mobile-menu-arrow" />
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -133,8 +168,8 @@ export default function Navbar() {
             <a href="https://maps.google.com" target="_blank" rel="noreferrer">
               <FaMapMarkerAlt /> <span>30 N Gould ST, Sheridan WY 82801</span>
             </a>
-            <a href="mailto:Info@fluxfreightllc.com">
-              <FaEnvelope /> <span>Info@fluxfreightllc.com</span>
+            <a href="mailto:Info@meglogistics.com">
+              <FaEnvelope /> <span>Info@meglogistics.com</span>
             </a>
           </div>
 

@@ -9,9 +9,9 @@
 
 /* Top accent strip in theme color */
 .footer-accent {
-  height: 4px;
+  height: 8px;
   width: 100%;
-  background: linear-gradient(90deg, var(--theme-color), var(--secondary-color) 70%);
+  background: var(--theme-color)
 }
 .footer-about img {
   height: 100px;
@@ -125,12 +125,9 @@
 
 .footer-links a:hover {
   color: #fff;
-  padding-left: 6px;
 }
 
-.footer-links a:hover svg {
-  transform: translateX(3px);
-}
+
 
 /* ── Contact list ── */
 .footer-contact {

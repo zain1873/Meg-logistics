@@ -1,0 +1,175 @@
+/* ══════════════════════════════════════
+   INDUSTRIES WE SERVE
+══════════════════════════════════════ */
+.industries-section {
+  background: var(--light-gray, #f5f5f5);
+  padding: 80px 20px;
+  scroll-margin-top: 110px;
+}
+
+.industries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Heading ── */
+.industries-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.industries-tag {
+  display: inline-block;
+  background: rgba(34, 117, 147, 0.12);
+  color: var(--theme-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.industries-title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.industries-subtitle {
+  color: #5a6b7a;
+  font-size: 16px;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Grid ── */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ── Card ── */
+.industry-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #e8edf0;
+  border-radius: 14px;
+  padding: 18px 22px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Accent fill that wipes in from the left on hover */
+.industry-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(34, 117, 147, 0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--theme-color);
+  box-shadow: 0 16px 34px rgba(12, 36, 72, 0.12);
+}
+
+.industry-card:hover::before {
+  opacity: 1;
+}
+
+/* ── Icon ── */
+.industry-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  color: var(--theme-color);
+  font-size: 24px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.5s ease;
+}
+
+/* Hover → icon color changes */
+.industry-card:hover .industry-icon {
+  background: var(--theme-color);
+  color: #fff;
+  transform: rotateY(360deg);
+}
+.industry-icon svg {
+  font-size: 40px;
+}
+
+/* ── Name ── */
+.industry-name {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.industry-card:hover .industry-name {
+  color: var(--theme-color);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .industries-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industries-section {
+    padding: 56px 16px;
+    scroll-margin-top: 90px;
+  }
+
+  .industries-title {
+    font-size: 25px;
+  }
+
+  .industries-subtitle {
+    font-size: 14px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .industry-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .industry-name {
+    font-size: 15px;
+  }
+}

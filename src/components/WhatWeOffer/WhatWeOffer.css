@@ -1,0 +1,244 @@
+/* ══════════════════════════════════════
+   WHAT WE OFFER  —  image overlay cards
+══════════════════════════════════════ */
+.offer-section {
+  padding: 90px 20px;
+  scroll-margin-top: 110px;
+}
+
+.offer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ── Heading ── */
+.offer-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.offer-tag {
+  display: inline-block;
+  background: rgba(34, 117, 147, 0.25);
+  color: var(--theme-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(34, 117, 147, 0.4);
+  margin-bottom: 20px;
+}
+
+.offer-title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 auto 16px;
+  line-height: 1.2;
+  max-width: 680px;
+}
+
+.offer-subtitle {
+  color: #5a6b7a;
+  font-size: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Grid ── */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Last row: 2 cards centered */
+.offer-card:nth-child(4) { grid-column: 1; }
+.offer-card:nth-child(5) { grid-column: 2; }
+
+/* ── Card ── */
+.offer-card {
+  position: relative;
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--secondary-color);
+}
+
+/* Background image */
+.offer-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+
+.offer-card:hover .offer-card-bg {
+  transform: scale(1.08);
+  will-change: transform;
+}
+
+/* Dark gradient overlay — permanent, deepens on hover */
+.offer-card-overlay {
+  position: absolute;
+  inset: 0;
+background: linear-gradient(to bottom, rgba(19, 25, 35, 0) 0%, #000 100%);
+}
+
+.offer-card:hover .offer-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(12, 36, 72, 0.97) 0%,
+    rgba(12, 36, 72, 0.7) 55%,
+    rgba(12, 36, 72, 0.3) 100%
+  );
+}
+
+/* Number badge */
+.offer-card-num {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  background: var(--theme-color);
+  padding: 5px 11px;
+  border-radius: 50px;
+  line-height: 1;
+}
+
+/* Content block — slides up on hover */
+.offer-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 26px 32px;
+  transform: translateY(52px);
+  transition: transform 0.4s ease;
+}
+
+.offer-card:hover .offer-card-content {
+  transform: translateY(0);
+}
+
+/* Icon */
+.offer-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--theme-color);
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+/* Title */
+.offer-card-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+/* Description */
+.offer-card-desc {
+  color: rgba(198, 205, 208, 0.85);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+
+/* CTA link */
+.offer-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 9px 22px;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease 0.08s, transform 0.3s ease 0.08s, background 0.25s ease, border-color 0.25s ease;
+}
+
+.offer-card:hover .offer-card-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.offer-card-link:hover {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset the last-row centering on smaller screens */
+  .offer-card:nth-child(4),
+  .offer-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .offer-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-section {
+    padding: 64px 16px;
+    scroll-margin-top: 90px;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .offer-card {
+    height: 360px;
+  }
+
+  .offer-title {
+    font-size: 25px;
+  }
+
+  .offer-subtitle {
+    font-size: 14px;
+  }
+
+  /* Always show content on mobile (no hover) */
+  .offer-card-content {
+    transform: translateY(0);
+  }
+
+  .offer-card-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

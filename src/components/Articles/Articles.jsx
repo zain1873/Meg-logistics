@@ -6,46 +6,47 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './Articles.css';
 
+import img1 from '../../assets/meg-articles/flux 1.png';
+import img2 from '../../assets/meg-articles/flux 2.png';
+import img3 from '../../assets/meg-articles/flux 3.png';
+import img4 from '../../assets/meg-articles/flux 4.png';
+import img5 from '../../assets/meg-articles/flux 5.png';
+
 const articles = [
   {
     category: 'Dispatching',
     title: 'How 24/7 Truck Dispatching Boosts Your Fleet Revenue',
     excerpt:
       'Discover how round-the-clock dispatching keeps your trucks moving, reduces empty miles, and secures higher-paying loads for owner-operators.',
-    image:
-      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80',
+    image: img1,
   },
   {
     category: 'Compliance',
     title: 'DOT & ELD Compliance: A Simple Guide for Carriers',
     excerpt:
       'Stay ahead of regulations. Learn the essential DOT and ELD requirements every carrier needs to avoid fines and operational disruptions.',
-    image:
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80',
+    image: img2,
   },
   {
     category: 'Freight Tips',
     title: 'Negotiating the Best Freight Rates in a Tight Market',
     excerpt:
       'Master the art of rate negotiation. Our dispatchers share proven strategies to secure premium freight that matches your routes and schedule.',
-    image:
-      'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=80',
+    image: img3,
   },
   {
     category: 'Fleet Management',
     title: 'Smart Fleet Management to Maximize Your Uptime',
     excerpt:
       'Keep every truck productive with proactive maintenance scheduling, route optimization, and real-time freight tracking that saves you money.',
-    image:
-      'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=80',
+    image: img4,
   },
   {
     category: 'Owner-Operators',
     title: 'Why Owner-Operators Partner With Meg Logistics',
     excerpt:
       'From single trucks to large fleets, see how our tailored dispatch solutions streamline operations and boost profitability for owner-operators.',
-    image:
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80',
+    image: img5,
   },
 ];
 
@@ -82,7 +83,6 @@ export default function Articles() {
               <article className="article-card">
                 <div className="article-image">
                   <img src={article.image} alt={article.title} loading="lazy" />
-                  <span className="article-category">{article.category}</span>
                 </div>
 
                 <div className="article-body">

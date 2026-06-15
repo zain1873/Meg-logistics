@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   FaMapMarkerAlt, FaEnvelope, FaPhone,
   FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube,
@@ -8,19 +7,19 @@ import {
 import './Footer.css';
 
 const quickLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'What We Offer', path: '/what-we-offer' },
-  { label: 'Industries We Serve', path: '/industries' },
-  { label: 'Why Meg Logistics LLC?', path: '/why-us' },
-  { label: 'Contact Us', path: '/contact' },
+  { label: 'Home',                  href: '#hero' },
+  { label: 'What We Offer',         href: '#what-we-offer' },
+  { label: 'Industries We Serve',   href: '#industries' },
+  { label: 'Why Meg Logistics LLC?',href: '#why-us' },
+  { label: 'Contact Us',            href: '#contact' },
 ];
 
 const services = [
-  { label: 'Dispatch Services', path: '/what-we-offer' },
-  { label: 'Flux Dispatching Course', path: '/what-we-offer' },
-  { label: 'Freight Management', path: '/what-we-offer' },
-  { label: 'Load Booking', path: '/what-we-offer' },
-  { label: 'Carrier Support', path: '/what-we-offer' },
+  { label: 'Dispatch Services',      href: '#what-we-offer' },
+  { label: 'Flux Dispatching Course',href: '#what-we-offer' },
+  { label: 'Freight Management',     href: '#what-we-offer' },
+  { label: 'Load Booking',           href: '#what-we-offer' },
+  { label: 'Carrier Support',        href: '#what-we-offer' },
 ];
 
 const socials = [
@@ -63,7 +62,7 @@ export default function Footer() {
           <ul className="footer-links">
             {quickLinks.map(link => (
               <li key={link.label}>
-                <Link to={link.path}><FaChevronRight /> {link.label}</Link>
+                <a href={link.href}><FaChevronRight /> {link.label}</a>
               </li>
             ))}
           </ul>
@@ -75,7 +74,7 @@ export default function Footer() {
           <ul className="footer-links">
             {services.map(item => (
               <li key={item.label}>
-                <Link to={item.path}><FaChevronRight /> {item.label}</Link>
+                <a href={item.href}><FaChevronRight /> {item.label}</a>
               </li>
             ))}
           </ul>
@@ -88,7 +87,7 @@ export default function Footer() {
             <li>
               <FaMapMarkerAlt className="footer-contact-icon" />
               <a href="https://maps.google.com" target="_blank" rel="noreferrer">
-                30 N Gould ST, Sheridan WY 82801
+                Denver, Colorado
               </a>
             </li>
             <li>
