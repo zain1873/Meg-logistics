@@ -128,7 +128,6 @@
   height: 630px;
   width: 400px;
   margin: auto;
-
 }
 
 .cores-image img {
@@ -150,10 +149,10 @@
 
   .cores-image {
     order: -1; /* image on top on mobile */
+    height: auto;
   }
-
-  .cores-image img {
-    max-height: 420px;
+  .cores-image {
+      width: -webkit-fill-available;
   }
 
   .cores-title {

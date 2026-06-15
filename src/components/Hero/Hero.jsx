@@ -49,25 +49,20 @@ const slides = [
 const INTERVAL = 5000;
 
 export default function Hero() {
-  const [active, setActive]   = useState(0);
-  const [paused, setPaused]   = useState(false);
+  const [active, setActive] = useState(0);
 
   const goTo = useCallback((idx) => setActive(idx), []);
   const next = useCallback(() => setActive((p) => (p + 1) % slides.length), []);
 
-  // Auto-advance; pause on hover
   useEffect(() => {
-    if (paused) return;
     const t = setInterval(next, INTERVAL);
     return () => clearInterval(t);
-  }, [next, paused, active]);
+  }, [next]);
 
   return (
     <section
       className="hero"
       id="hero"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       {/* ── Background slides ── */}
       {slides.map((s, i) => (

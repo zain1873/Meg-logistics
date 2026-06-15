@@ -219,7 +219,7 @@
 @media (max-width: 960px) {
   .about-container {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 30px;
     text-align: center;
   }
 
@@ -252,18 +252,19 @@
   }
 
   .about-orbit-wrapper {
-    width: 300px;
-    height: 300px;
+    width: min(220px, 90vw);
+    height: min(220px, 90vw);
+    flex-shrink: 1;
   }
 
   .about-dashed-ring {
-    width: 228px;
-    height: 228px;
+    width: min(228px, 68vw);
+    height: min(228px, 68vw);
   }
 
   .about-logo-circle {
-    width: 188px;
-    height: 188px;
+    width: min(160px, 56vw);
+    height: min(160px, 56vw);
   }
 
   .about-orbit-text {
