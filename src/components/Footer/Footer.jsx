@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaMapMarkerAlt, FaEnvelope, FaPhone,
   FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube,
@@ -106,6 +107,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="footer-bottom">
         <p>© {year} Meg Logistics LLC. All rights reserved.</p>
+        <div className="footer-legal-links">
+          <Link to="/terms">Terms &amp; Conditions</Link>
+          <span className="footer-legal-sep">|</span>
+          <Link to="/privacy">Privacy Policy</Link>
+        </div>
         <p className="footer-credit">
           Designed by{' '}
           <a href="https://twocoreglobal.com" target="_blank" rel="noreferrer">
