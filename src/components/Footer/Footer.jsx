@@ -17,7 +17,6 @@ const quickLinks = [
 
 const services = [
   { label: 'Dispatch Services',      href: '#what-we-offer' },
-  { label: 'Flux Dispatching Course',href: '#what-we-offer' },
   { label: 'Freight Management',     href: '#what-we-offer' },
   { label: 'Load Booking',           href: '#what-we-offer' },
   { label: 'Carrier Support',        href: '#what-we-offer' },
@@ -42,7 +41,9 @@ export default function Footer() {
 
         {/* About / Brand */}
         <div className="footer-col footer-about">
-          <img src="/project-logo.png" alt="Flux Freight LLC" className="footer-logo" />
+          <div className="footer-img">
+          <Link to="/"><img src="/project-logo.png" alt="Meg Logistics LLC" className="footer-logo" /></Link>
+          </div>
           <p className="footer-desc">
             Meg Logistics LLC — Swift &amp; Steady. We provide reliable freight
             dispatch services, connecting carriers with the best loads to keep
@@ -93,7 +94,7 @@ export default function Footer() {
             </li>
             <li>
               <FaEnvelope className="footer-contact-icon" />
-              <a href="mailto:Info@fluxfreightllc.com">Info@meglogistics.com</a>
+              <a href="mailto:info@meglogistic.com">info@meglogistic.com</a>
             </li>
             <li>
               <FaPhone className="footer-contact-icon" />

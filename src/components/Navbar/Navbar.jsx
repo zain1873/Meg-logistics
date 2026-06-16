@@ -88,9 +88,9 @@ export default function Navbar() {
                 <span className="topbar-divider" />
 
                 <span className="topbar-divider" />
-                <a href="mailto:Info@meglogistics.com" className="topbar-item">
+                <a href="mailto:info@meglogistic.com" className="topbar-item">
                   <FaEnvelope className="topbar-icon" />
-                  <span>Info@meglogistics.com</span>
+                  <span>info@meglogistic.com</span>
                 </a>
               </div>
               <div className="topbar-socials">
@@ -168,8 +168,8 @@ export default function Navbar() {
             <a href="https://maps.google.com" target="_blank" rel="noreferrer">
               <FaMapMarkerAlt /> <span>30 N Gould ST, Sheridan WY 82801</span>
             </a>
-            <a href="mailto:Info@meglogistics.com">
-              <FaEnvelope /> <span>Info@meglogistics.com</span>
+            <a href="mailto:info@meglogistic.com">
+              <FaEnvelope /> <span>info@meglogistic.com</span>
             </a>
           </div>
 

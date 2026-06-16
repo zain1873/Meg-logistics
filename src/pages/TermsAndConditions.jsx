@@ -122,7 +122,7 @@ export default function TermsAndConditions() {
             If you have any questions or concerns about our Terms &amp; Conditions,
             our team is here to help you.
           </p>
-          <a href="mailto:Info@meglogistics.com">Contact Us</a>
+          <a href="mailto:info@meglogistic.com">Contact Us</a>
         </div>
       </main>
 

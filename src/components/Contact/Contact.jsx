@@ -15,8 +15,8 @@ const infoItems = [
   {
     Icon: FaEnvelope,
     label: 'Email',
-    value: 'Info@meglogistics.com',
-    href: 'mailto:Info@meglogistics.com',
+    value: 'info@meglogistic.com',
+    href: 'mailto:info@meglogistic.com',
   },
   {
     Icon: FaMapMarkerAlt,

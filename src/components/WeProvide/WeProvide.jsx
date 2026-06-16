@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import {
   FaTruck, FaTruckLoading, FaSnowflake, FaBox,
-  FaOilCan, FaTruckMoving, FaLayerGroup, FaWeightHanging,
+  FaOilCan, FaTruckMoving, FaLayerGroup, FaShippingFast,
   FaArrowRight, FaChevronRight,
 } from 'react-icons/fa';
 import './WeProvide.css';
 
-import dryVansImg    from '../../assets/industrial-sector-lower/dry vans.png';
-import flatbedImg    from '../../assets/industrial-sector-lower/flatbed.png';
-import refferImg     from '../../assets/industrial-sector-lower/reffers.png';
-import boxTruckImg   from '../../assets/industrial-sector-lower/box truck.png';
-import tankerImg     from '../../assets/industrial-sector-lower/Conestoga.png';
-import powerOnlyImg  from '../../assets/industrial-sector-lower/Intermodal container loads availability.png';
-import stepDeckImg   from '../../assets/industrial-sector-lower/step deck.png';
+import dryVansImg    from '../../assets/we-provide/dry-vans.png';
+import flatbedImg    from '../../assets/we-provide/flatbeds.png';
+import refferImg     from '../../assets/we-provide/reefers.png';
+import boxTruckImg   from '../../assets/we-provide/box-truck.png';
+import tankerImg     from '../../assets/we-provide/tanker-truck.jpg';
+import powerOnlyImg  from '../../assets/we-provide/power-only.jpg';
+import stepDeckImg   from '../../assets/we-provide/step-deck.jpg';
+import conesTogaImg  from '../../assets/we-provide/conestoga.png';
+import intermodalImg from '../../assets/we-provide/intermodal-container.jpg';
 
 const services = [
   {
@@ -118,18 +120,34 @@ const services = [
     image: stepDeckImg,
   },
   {
-    Icon: FaWeightHanging,
-    tabName: 'Lowboy / RGN',
-    title: 'Lowboy or RGN Trailers',
-    subtitle: 'Heavy Equipment Transport',
+    Icon: FaLayerGroup,
+    tabName: 'Conestoga',
+    title: 'Conestoga',
+    subtitle: 'Versatile Tarped Flatbed Transport',
     description:
-      'Lowboys are specialized trailers with an extremely low deck height, built for hauling the heaviest and tallest loads on the road.',
+      'Conestoga trailers combine the accessibility of a flatbed with the weather protection of a curtainside, featuring a retractable tarp system for easy loading and cargo protection.',
     details: [
-      { label: 'Description', text: 'Used for hauling oversized or heavy equipment such as bulldozers and cranes.' },
-      { label: 'Uses', text: 'Ideal for tall loads that cannot be transported on other trailer types due to height restrictions.' },
+      { label: 'Description', text: 'Flatbed trailers with a rolling tarp system that covers the entire load.' },
+      { label: 'Uses', text: 'Steel coils, machinery, lumber, and any flatbed freight requiring weather protection.' },
+      { label: 'Features', text: 'Retractable tarp allows side loading while keeping cargo fully protected.' },
     ],
     specs: [],
-    image: flatbedImg,
+    image: conesTogaImg,
+  },
+  {
+    Icon: FaShippingFast,
+    tabName: 'Intermodal',
+    title: 'Intermodal Container Loads Availability',
+    subtitle: 'Seamless Multi-Mode Freight Solutions',
+    description:
+      'Intermodal freight uses standardized containers that move seamlessly between trucks, trains, and ships — delivering efficiency and cost savings across long-haul routes.',
+    details: [
+      { label: 'Description', text: 'Standardized shipping containers transported across multiple modes of transit.' },
+      { label: 'Uses', text: 'Long-distance domestic and international freight, port drayage, and rail transfers.' },
+      { label: 'Features', text: 'No cargo unloading between modes — reduces handling damage and transit time.' },
+    ],
+    specs: [],
+    image: intermodalImg,
   },
 ];
 

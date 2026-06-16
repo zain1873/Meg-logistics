@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
             To exercise your privacy rights or if you have questions about how
             we handle your data, please reach out to us directly.
           </p>
-          <a href="mailto:Info@meglogistics.com">Contact Us</a>
+          <a href="mailto:info@meglogistic.com">Contact Us</a>
         </div>
       </main>
 
