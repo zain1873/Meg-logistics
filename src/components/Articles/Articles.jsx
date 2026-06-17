@@ -6,11 +6,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './Articles.css';
 
-import img1 from '../../assets/meg-articles/flux 1.png';
-import img2 from '../../assets/meg-articles/flux 2.png';
-import img3 from '../../assets/meg-articles/flux 3.png';
-import img4 from '../../assets/meg-articles/flux 4.png';
-import img5 from '../../assets/meg-articles/flux 5.png';
+import img1 from '../../assets/aricles/article-1.jpeg';
+import img2 from '../../assets/aricles/article-2.jpeg';
+import img3 from '../../assets/aricles/article-3.jpeg';
+import img4 from '../../assets/aricles/article-4.jpeg';
+import img5 from '../../assets/aricles/article-5.jpeg';
 
 const articles = [
   {
