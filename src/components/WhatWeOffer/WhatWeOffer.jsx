@@ -7,6 +7,7 @@ import end2 from '../../assets/what-we-offer/end 2.png';
 import end3 from '../../assets/what-we-offer/end 3.png';
 import end4 from '../../assets/what-we-offer/end 4.png';
 import end5 from '../../assets/what-we-offer/end 5.png';
+import end6 from '../../assets/what-we-offer/end-6.jpg';
 
 const offers = [
   {
@@ -49,7 +50,7 @@ const offers = [
     num: '06',
     title: 'Paperwork & Compliance',
     desc: 'We handle rate confirmations, BOLs, and carrier packets so you stay compliant and focused on the road.',
-    image: end1,
+    image: end6,
   },
 ];
 
