@@ -2,10 +2,11 @@ import React from 'react';
 import { FaTruck, FaDollarSign, FaRoute, FaHeadset, FaMapMarkedAlt } from 'react-icons/fa';
 import './WhatWeOffer.css';
 
-import banner1 from '../../assets/banners/banner 1.jpg';
-import banner2 from '../../assets/banners/banner 2.jpg';
-import banner3 from '../../assets/banners/banner 3.jpg';
-import banner4 from '../../assets/banners/banner 4.jpg';
+import end1 from '../../assets/what-we-offer/end 1.png';
+import end2 from '../../assets/what-we-offer/end 2.png';
+import end3 from '../../assets/what-we-offer/end 3.png';
+import end4 from '../../assets/what-we-offer/end 4.png';
+import end5 from '../../assets/what-we-offer/end 5.png';
 
 const offers = [
   {
@@ -13,35 +14,35 @@ const offers = [
     num: '01',
     title: 'Load Sourcing & Scheduling',
     desc: 'Find high-paying shipments that align with your route and availability — zero guesswork, maximum efficiency.',
-    image: banner1,
+    image: end1,
   },
   {
     Icon: FaDollarSign,
     num: '02',
     title: 'Optimized Freight Rates',
     desc: 'We negotiate competitive rates so you earn more on every mile. No settling for low-ball offers.',
-    image: banner2,
+    image: end2,
   },
   {
     Icon: FaRoute,
     num: '03',
     title: 'Strategic Route Planning',
     desc: 'Minimize fuel costs and avoid delays with optimized trip coordination across all 48 states.',
-    image: banner3,
+    image: end3,
   },
   {
     Icon: FaHeadset,
     num: '04',
     title: '24/7 Dispatch Support',
     desc: 'Round-the-clock dispatching to keep your trucks moving day and night — always on call for you.',
-    image: banner4,
+    image: end4,
   },
   {
     Icon: FaMapMarkedAlt,
     num: '05',
     title: 'Real-Time Tracking',
     desc: 'Complete visibility over your freight with live updates, accurate ETAs, and constant communication.',
-    image: banner2,
+    image: end5,
   },
 ];
 

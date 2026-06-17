@@ -2,10 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { FaArrowRight, FaPhone } from 'react-icons/fa';
 import './Hero.css';
 
-import banner1 from '../../assets/banners/banner 1.jpg';
-import banner2 from '../../assets/banners/banner 2.jpg';
-import banner3 from '../../assets/banners/banner 3.jpg';
-import banner4 from '../../assets/banners/banner 4.jpg';
+import banner1 from '../../assets/banners/banner-1.jpg';
+import banner2 from '../../assets/banners/banner-2.jpeg';
+import banner3 from '../../assets/banners/banner-3.jpg';
 
 const slides = [
   {
@@ -36,13 +35,22 @@ const slides = [
     cta2: { label: 'Industries We Serve', href: '#industries' },
   },
   {
-    image: banner4,
+    image: banner1,
     tag: 'Always On Call',
     title: '24/7 Dispatch\nSupport',
     subtitle:
       'Day or night, our team is always available. You approve every load — full control stays with you, always.',
     cta:  { label: 'Contact Us',   href: '#contact' },
     cta2: { label: 'Learn More',   href: '#about' },
+  },
+  {
+    image: banner2,
+    tag: 'Real-Time Tracking',
+    title: 'Total Visibility,\nEvery Mile',
+    subtitle:
+      'Stay informed with live updates, accurate ETAs and constant communication — complete visibility over your freight at all times.',
+    cta:  { label: 'Get Started',  href: '#contact' },
+    cta2: { label: 'What We Offer', href: '#what-we-offer' },
   },
 ];
 

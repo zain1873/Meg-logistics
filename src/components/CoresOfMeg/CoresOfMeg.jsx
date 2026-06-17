@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTruck, FaMoneyBillWave, FaHeadset, FaCheckCircle } from 'react-icons/fa';
 import './CoresOfMeg.css';
 
-import coresImage from '../../assets/cores.jpg';
+import coresImage from '../../assets/cores-of-meg/cores.jpg';
 
 const highlights = [
   { Icon: FaTruck, text: 'Truck Dispatch Services' },
@@ -60,3 +60,4 @@ export default function CoresOfMeg() {
     </section>
   );
 }
+  

@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import './WeProvide.css';
 
-import dryVansImg    from '../../assets/we-provide/dry-vans.png';
+import dryVansImg    from '../../assets/we-provide/dry vans.png';
 import flatbedImg    from '../../assets/we-provide/flatbeds.png';
 import refferImg     from '../../assets/we-provide/reefers.png';
 import boxTruckImg   from '../../assets/we-provide/box-truck.png';
