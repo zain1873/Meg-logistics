@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTruck, FaDollarSign, FaRoute, FaHeadset, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaTruck, FaDollarSign, FaRoute, FaHeadset, FaMapMarkedAlt, FaFileContract } from 'react-icons/fa';
 import './WhatWeOffer.css';
 
 import end1 from '../../assets/what-we-offer/end 1.png';
@@ -43,6 +43,13 @@ const offers = [
     title: 'Real-Time Tracking',
     desc: 'Complete visibility over your freight with live updates, accurate ETAs, and constant communication.',
     image: end5,
+  },
+  {
+    Icon: FaFileContract,
+    num: '06',
+    title: 'Paperwork & Compliance',
+    desc: 'We handle rate confirmations, BOLs, and carrier packets so you stay compliant and focused on the road.',
+    image: end1,
   },
 ];
 
