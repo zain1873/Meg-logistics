@@ -2,12 +2,12 @@ import React from 'react';
 import { FaTruck, FaDollarSign, FaRoute, FaHeadset, FaMapMarkedAlt, FaFileContract } from 'react-icons/fa';
 import './WhatWeOffer.css';
 
-import end1 from '../../assets/what-we-offer/end 1.png';
-import end2 from '../../assets/what-we-offer/end 2.png';
-import end3 from '../../assets/what-we-offer/end 3.png';
-import end4 from '../../assets/what-we-offer/end 4.png';
-import end5 from '../../assets/what-we-offer/end 5.png';
-import end6 from '../../assets/what-we-offer/end-6.jpg';
+import end1 from '../../assets/what-we-offer/Load Sourcing & Scheduling.jpeg';
+import end2 from '../../assets/what-we-offer/Optimized Freight Rates.jpeg';
+import end3 from '../../assets/what-we-offer/Strategic Route Planning.jpeg';
+import end4 from '../../assets/what-we-offer/7 Dispatch Support.png';
+import end5 from '../../assets/what-we-offer/Real-Time Tracking.jpeg';
+import end6 from '../../assets/what-we-offer/paper-work.jpg';
 
 const offers = [
   {

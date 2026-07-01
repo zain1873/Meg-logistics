@@ -6,14 +6,14 @@ import {
 } from 'react-icons/fa';
 import './WeProvide.css';
 
-import dryVansImg    from '../../assets/we-provide/dry vans.png';
-import flatbedImg    from '../../assets/we-provide/flatbeds.png';
-import refferImg     from '../../assets/we-provide/reefers.png';
-import boxTruckImg   from '../../assets/we-provide/box-truck.png';
-import tankerImg     from '../../assets/we-provide/tanker-truck.jpg';
-import powerOnlyImg  from '../../assets/we-provide/power-only.jpg';
-import stepDeckImg   from '../../assets/we-provide/step-deck.jpg';
-import conesTogaImg  from '../../assets/we-provide/conestoga.png';
+import dryVansImg    from '../../assets/we-provide/Dry Van.jpg';
+import flatbedImg    from '../../assets/we-provide/Flatbed.jpg';
+import refferImg     from '../../assets/we-provide/reefer.jpg';
+import boxTruckImg   from '../../assets/we-provide/Box Truck.jpg';
+import tankerImg     from '../../assets/we-provide/Reefer Box Truck.jpg';
+import powerOnlyImg  from '../../assets/we-provide/Semi-truck.jpg';
+import stepDeckImg   from '../../assets/we-provide/Step-deck.jpg';
+import conesTogaImg  from '../../assets/we-provide/Conestoga.jpg';
 import intermodalImg from '../../assets/we-provide/intermodal-container.jpg';
 
 const services = [
@@ -78,8 +78,8 @@ const services = [
   },
   {
     Icon: FaOilCan,
-    tabName: 'Tanker Trucks',
-    title: 'Tanker Trucks',
+    tabName: 'Refer Van',
+    title: 'Refer Van',
     subtitle: 'Liquid, Hazardous, and Chemical Transport',
     description:
       'Built for safe and compliant bulk liquid transportation, handling everything from fuel to food-grade materials.',

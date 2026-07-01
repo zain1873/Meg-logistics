@@ -6,11 +6,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './Articles.css';
 
-import img1 from '../../assets/aricles/article-1.jpeg';
-import img2 from '../../assets/aricles/article-2.jpeg';
-import img3 from '../../assets/aricles/article-3.jpeg';
-import img4 from '../../assets/aricles/article-4.jpeg';
-import img5 from '../../assets/aricles/article-5.jpeg';
+import img1 from '../../assets/aricles/article1.jpeg';
+import img2 from '../../assets/aricles/article2.jpeg';
+import img3 from '../../assets/aricles/article3.jpeg';
+import img4 from '../../assets/aricles/article4.jpeg';
+import img5 from '../../assets/aricles/article5.jpeg';
 
 const articles = [
   {
