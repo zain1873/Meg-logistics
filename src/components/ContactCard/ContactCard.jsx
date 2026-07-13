@@ -13,7 +13,7 @@ export default function LegalContactCard({
 
       <p>{description}</p>
 
-        <Link to="/contact" className="legal-contact-btn">
+        <Link to="/#contact" className="legal-contact-btn">
         Contact Us
       </Link>
     </div>
