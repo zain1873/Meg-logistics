@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="navbar-header-content">
           <div className="header-left">
             <div className="header-contact">
-              <a href="tel:+13074001222" className="header-contact-item">
+              <a href="tel:+13038794908" className="header-contact-item">
                 <span>📍</span>
                 <span>30 N Gold ST, Sheridan WY 82801</span>
               </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
         {/* Phone Number */}
         <div className="navbar-phone">
           <span>☎️</span>
-          <a href="tel:+13074001222">(307) 400-1222</a>
+          <a href="tel:+13038794908">+1 (303) 879-4908</a>
         </div>
       </div>
     </nav>

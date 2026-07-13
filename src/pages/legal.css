@@ -96,6 +96,7 @@
   margin-bottom: 18px;
 }
 
+
 .legal-section-number {
   display: flex;
   align-items: center;
@@ -112,16 +113,27 @@
 
 .legal-section h2 {
   color: var(--secondary-color);
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   margin: 0;
+}
+.legal-contact-details a {
+  font-weight: 700;
+}
+.legal-contact-details a:hover {
+  border-bottom: 1px solid var(--theme-color);
+
+}
+.legal-contact-details strong {
+  font-size: 22px;
+  color: var(--theme-color);
 }
 
 .legal-section p {
   color: #444;
   font-size: 15px;
   line-height: 1.8;
-  margin: 0 0 14px;
+  /* margin: 0 0 14px; */
 }
 
 .legal-section p:last-child {

@@ -102,8 +102,8 @@ export default function Hero() {
             {slides[active].cta2.label}
           </a>
         </div>
-        <a href="tel:+13074001222" className="hero-phone">
-          <FaPhone /> (307) 400-1222
+        <a href="tel:+13038794908" className="hero-phone">
+          <FaPhone /> +1 (303) 879-4908
         </a>
       </div>
 

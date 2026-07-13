@@ -8,18 +8,18 @@ import {
 import './Footer.css';
 
 const quickLinks = [
-  { label: 'Home',                  href: '#hero' },
-  { label: 'What We Offer',         href: '#what-we-offer' },
-  { label: 'Industries We Serve',   href: '#industries' },
-  { label: 'Why Meg Logistics LLC?',href: '#why-us' },
-  { label: 'Contact Us',            href: '#contact' },
+  { label: 'Home',                  href: '/#hero' },
+  { label: 'What We Offer',         href: '/#what-we-offer' },
+  { label: 'Industries We Serve',   href: '/#industries' },
+  { label: 'Why Meg Logistics LLC?',href: '/#why-us' },
+  { label: 'Contact Us',            href: '/#contact' },
 ];
 
 const services = [
-  { label: 'Dispatch Services',      href: '#what-we-offer' },
-  { label: 'Freight Management',     href: '#what-we-offer' },
-  { label: 'Load Booking',           href: '#what-we-offer' },
-  { label: 'Carrier Support',        href: '#what-we-offer' },
+  { label: 'Dispatch Services',      href: '/#what-we-offer' },
+  { label: 'Freight Management',     href: '/#what-we-offer' },
+  { label: 'Load Booking',           href: '/#what-we-offer' },
+  { label: 'Carrier Support',        href: '/#what-we-offer' },
 ];
 
 const socials = [
@@ -88,8 +88,8 @@ export default function Footer() {
           <ul className="footer-contact">
             <li>
               <FaMapMarkerAlt className="footer-contact-icon" />
-              <a href="https://maps.google.com" target="_blank" rel="noreferrer">
-                Denver, Colorado
+              <a href="https://maps.google.com/?q=1500+N+Grant+ST+STE+R+Denver+CO+80203" target="_blank" rel="noreferrer">
+                1500 N Grant ST STE R, Denver CO 80203
               </a>
             </li>
             <li>
@@ -98,7 +98,7 @@ export default function Footer() {
             </li>
             <li>
               <FaPhone className="footer-contact-icon" />
-              <a href="tel:+13074001222">(307) 400-1222</a>
+              <a href="tel:+13038794908">+1 (303) 879-4908</a>
             </li>
           </ul>
         </div>
@@ -109,9 +109,13 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© {year} Meg Logistics LLC. All rights reserved.</p>
         <div className="footer-legal-links">
-          <Link to="/terms">Terms &amp; Conditions</Link>
+          <Link to="/terms">Terms & Conditions</Link>
           <span className="footer-legal-sep">|</span>
           <Link to="/privacy">Privacy Policy</Link>
+          <span className="footer-legal-sep">|</span>
+          <Link to="/sms-terms">SMS Terms</Link>
+          <span className="footer-legal-sep">|</span>
+          <Link to="/cookies">Cookie Policy</Link>
         </div>
         <p className="footer-credit">
           Designed by{' '}

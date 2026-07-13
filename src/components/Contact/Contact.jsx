@@ -9,8 +9,8 @@ const infoItems = [
   {
     Icon: FaPhone,
     label: 'Phone',
-    value: '(307) 400-1222',
-    href: 'tel:+13074001222',
+    value: '+1 (303) 879-4908',
+    href: 'tel:+13038794908',
   },
   {
     Icon: FaEnvelope,
@@ -21,8 +21,8 @@ const infoItems = [
   {
     Icon: FaMapMarkerAlt,
     label: 'Address',
-    value: 'Denver, Colorado',
-    href: 'https://maps.google.com/?q=30+N+Gould+ST+Sheridan+WY+82801',
+    value: '1500 N Grant ST STE R, Denver CO 80203',
+    href: 'https://maps.google.com/?q=1500+N+Grant+ST+STE+R+Denver+CO+80203',
   },
   {
     Icon: FaClock,
@@ -35,24 +35,26 @@ const infoItems = [
 const truckTypes = [
   'Dry Van',
   'Flatbed',
-  'Reefer / Refrigerated',
+  'Reefers',
   'Box Truck',
-  'Tanker Truck',
+  'Reefer Van',
   'Power-Only',
   'Step Deck',
-  'Lowboy / RGN',
-  'Other',
+  'Conestoga',
+  'Intermodal',
 ];
 
-const INIT = { name: '', email: '', phone: '', truck: '', message: '' };
+const INIT = { name: '', email: '', phone: '', truck: '', message: '', smsConsent: false };
 
 export default function Contact() {
   const [form, setForm]           = useState(INIT);
   const [loading, setLoading]     = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handle = (e) =>
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const handle = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+  };
 
   const submit = (e) => {
     e.preventDefault();
@@ -211,6 +213,34 @@ export default function Contact() {
                     placeholder="Tell us about your truck, routes, and what you're looking for…"
                     required
                   />
+                </div>
+
+                {/* SMS Consent */}
+                <div className="ct-checkbox-field">
+                  <input
+                    id="ct-sms-consent"
+                    className="ct-checkbox-input"
+                    type="checkbox"
+                    name="smsConsent"
+                    checked={form.smsConsent}
+                    onChange={handle}
+                    required
+                  />
+                  <label className="ct-checkbox-label" htmlFor="ct-sms-consent">
+                    I agree to receive SMS messages from Meg Logistics LLC regarding
+                    dispatch services, load updates, appointment reminders, account
+                    notifications, and customer support. Message frequency varies.
+                    Message and data rates may apply. Reply STOP to opt out or HELP
+                    for assistance. I have read and agree to the{' '}
+                    <a href="/privacy" target="_blank" rel="noreferrer">
+                      Privacy Policy
+                    </a>{' '}
+                    and{' '}
+                    <a href="/sms-terms" target="_blank" rel="noreferrer">
+                      SMS Terms &amp; Conditions
+                    </a>
+                    . <span>*</span>
+                  </label>
                 </div>
 
                 <button

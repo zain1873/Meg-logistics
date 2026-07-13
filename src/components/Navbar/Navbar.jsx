@@ -8,11 +8,11 @@ import {
 import './Navbar.css';
 
 const navLinks = [
-  { label: 'Home', href: '#top' },
-  { label: 'What We Offer', href: '#what-we-offer' },
-  { label: 'Industries We Serve', href: '#industries' },
-  { label: 'Why Meg Logistics LLC?', href: '#why-us' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/#top' },
+  { label: 'What We Offer', href: '/#what-we-offer' },
+  { label: 'Industries We Serve', href: '/#industries' },
+  { label: 'Why Meg Logistics LLC?', href: '/#why-us' },
+  { label: 'Contact Us', href: '/#contact' },
 ];
 
 const socials = [
@@ -75,15 +75,15 @@ export default function Navbar() {
             {/* Top info bar */}
             <div className="navbar-topbar">
               <div className="topbar-contact">
-                <a href="https://maps.google.com/?q=Denver,Colorado" className="topbar-item" target="_blank" rel="noreferrer">
+                <a href="https://maps.google.com/?q=1500+N+Grant+ST+STE+R+Denver+CO+80203" className="topbar-item" target="_blank" rel="noreferrer">
                   <FaMapMarkerAlt className="topbar-icon" />
-                  <span>Denver, Colorado</span>
+                  <span>1500 N Grant ST STE R, Denver CO 80203</span>
                 </a>
              
                 <span className="topbar-divider" />
-                <a href="tel:+13074001222" className="topbar-item">
+                <a href="tel:+13038794908" className="topbar-item">
                   <FaPhone className="topbar-icon" />
-                  <span>(307) 400-1222</span>
+                  <span>+1 (303) 879-4908</span>
                 </a>
                 <span className="topbar-divider" />
 
@@ -109,9 +109,9 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              <a href="tel:+13074001222" className="navbar-phone">
+              <a href="tel:+13038794908" className="navbar-phone">
                 <FaPhone />
-                <span>(307) 400-1222</span>
+                <span>+1 (303) 879-4908</span>
               </a>
             </div>
 
@@ -119,9 +119,9 @@ export default function Navbar() {
 
           {/* ── Mobile actions: phone + hamburger ── */}
           <div className="navbar-mobile-actions">
-            <a href="tel:+13074001222" className="mobile-call-btn" aria-label="Call us">
+            <a href="tel:+13038794908" className="mobile-call-btn" aria-label="Call us">
               <FaPhone />
-              <span>(307) 400-1222</span>
+              <span>+1 (303) 879-4908</span>
             </a>
 
             <button
@@ -160,13 +160,13 @@ export default function Navbar() {
         </nav>
 
         <div className="mobile-menu-footer">
-          <a href="tel:+13074001222" className="mobile-menu-phone">
-            <FaPhone /> (307) 400-1222
+          <a href="tel:+13038794908" className="mobile-menu-phone">
+            <FaPhone /> +1 (303) 879-4908
           </a>
 
           <div className="mobile-menu-contact">
-            <a href="https://maps.google.com" target="_blank" rel="noreferrer">
-              <FaMapMarkerAlt /> <span>30 N Gould ST, Sheridan WY 82801</span>
+            <a href="https://maps.google.com/?q=1500+N+Grant+ST+STE+R+Denver+CO+80203" target="_blank" rel="noreferrer">
+              <FaMapMarkerAlt /> <span>1500 N Grant ST STE R, Denver CO 80203</span>
             </a>
             <a href="mailto:info@meglogistic.com">
               <FaEnvelope /> <span>info@meglogistic.com</span>

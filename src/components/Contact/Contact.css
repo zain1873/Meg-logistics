@@ -240,6 +240,47 @@
   line-height: 1.6;
 }
 
+/* ── SMS Consent Checkbox ── */
+.ct-checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1.5px solid #dde3e7;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.ct-checkbox-input {
+  margin-top: 3px;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  accent-color: var(--theme-color);
+  cursor: pointer;
+}
+
+.ct-checkbox-label {
+  color: #5a6b7a;
+  font-size: 12.5px;
+  line-height: 1.65;
+  cursor: pointer;
+}
+
+.ct-checkbox-label span {
+  color: var(--theme-color);
+}
+
+.ct-checkbox-label a {
+  color: var(--theme-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ct-checkbox-label a:hover {
+  color: var(--secondary-color);
+}
+
 /* Submit */
 .ct-submit {
   width: 100%;

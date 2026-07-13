@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from "../components/Navbar/Navbar"
 import Hero from "../components/Hero/Hero"
 import WhatWeOffer from "../components/WhatWeOffer/WhatWeOffer"
@@ -13,6 +13,18 @@ import Footer from "../components/Footer/Footer"
 import WhatsAppButton from "../components/WhatsApp/WhatsAppButton"
 
 function home() {
+  useEffect(() => {
+    // Scroll to section if URL contains a hash (e.g. /#contact)
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, []);
+
   return (
     <div id="top">
       <Navbar/>
