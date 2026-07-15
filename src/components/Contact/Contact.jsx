@@ -50,19 +50,44 @@ export default function Contact() {
   const [form, setForm]           = useState(INIT);
   const [loading, setLoading]     = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const handle = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setFieldErrors({});
+    try {
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        if (data.errors) {
+          const errors = {};
+          data.errors.forEach(({ field, message }) => {
+            errors[field] = message;
+          });
+          setFieldErrors(errors);
+        }
+        throw new Error(data.message || 'Submission failed');
+      }
+
       setSubmitted(true);
-    }, 1400);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const reset = () => {
@@ -146,7 +171,7 @@ export default function Contact() {
                     <label className="ct-label" htmlFor="ct-name">Full Name <span>*</span></label>
                     <input
                       id="ct-name"
-                      className="ct-input"
+                      className={`ct-input${fieldErrors.name ? ' ct-input--error' : ''}`}
                       type="text"
                       name="name"
                       value={form.name}
@@ -154,12 +179,13 @@ export default function Contact() {
                       placeholder="John Smith"
                       required
                     />
+                    {fieldErrors.name && <span className="ct-field-error">{fieldErrors.name}</span>}
                   </div>
                   <div className="ct-field">
                     <label className="ct-label" htmlFor="ct-email">Email Address <span>*</span></label>
                     <input
                       id="ct-email"
-                      className="ct-input"
+                      className={`ct-input${fieldErrors.email ? ' ct-input--error' : ''}`}
                       type="email"
                       name="email"
                       value={form.email}
@@ -167,6 +193,7 @@ export default function Contact() {
                       placeholder="john@example.com"
                       required
                     />
+                    {fieldErrors.email && <span className="ct-field-error">{fieldErrors.email}</span>}
                   </div>
                 </div>
 
@@ -176,19 +203,20 @@ export default function Contact() {
                     <label className="ct-label" htmlFor="ct-phone">Phone Number</label>
                     <input
                       id="ct-phone"
-                      className="ct-input"
+                      className={`ct-input${fieldErrors.phone ? ' ct-input--error' : ''}`}
                       type="tel"
                       name="phone"
                       value={form.phone}
                       onChange={handle}
                       placeholder="(000) 000-0000"
                     />
+                    {fieldErrors.phone && <span className="ct-field-error">{fieldErrors.phone}</span>}
                   </div>
                   <div className="ct-field">
                     <label className="ct-label" htmlFor="ct-truck">Truck Type</label>
                     <select
                       id="ct-truck"
-                      className="ct-input ct-select"
+                      className={`ct-input ct-select${fieldErrors.truck ? ' ct-input--error' : ''}`}
                       name="truck"
                       value={form.truck}
                       onChange={handle}
@@ -204,28 +232,30 @@ export default function Contact() {
                 {/* Message */}
                 <div className="ct-field">
                   <label className="ct-label" htmlFor="ct-msg">Message <span>*</span></label>
-                  <textarea
-                    id="ct-msg"
-                    className="ct-input ct-textarea"
-                    name="message"
-                    value={form.message}
-                    onChange={handle}
-                    placeholder="Tell us about your truck, routes, and what you're looking for…"
-                    required
-                  />
+                    <textarea
+                      id="ct-msg"
+                      className={`ct-input ct-textarea${fieldErrors.message ? ' ct-input--error' : ''}`}
+                      name="message"
+                      value={form.message}
+                      onChange={handle}
+                      placeholder="Tell us about your truck, routes, and what you're looking for…"
+                      required
+                    />
+                    {fieldErrors.message && <span className="ct-field-error">{fieldErrors.message}</span>}
                 </div>
 
                 {/* SMS Consent */}
                 <div className="ct-checkbox-field">
                   <input
                     id="ct-sms-consent"
-                    className="ct-checkbox-input"
+                    className={`ct-checkbox-input${fieldErrors.smsConsent ? ' ct-input--error' : ''}`}
                     type="checkbox"
                     name="smsConsent"
                     checked={form.smsConsent}
                     onChange={handle}
                     required
                   />
+                  {fieldErrors.smsConsent && <span className="ct-field-error">{fieldErrors.smsConsent}</span>}
                   <label className="ct-checkbox-label" htmlFor="ct-sms-consent">
                     I agree to receive SMS messages from Meg Logistics LLC regarding
                     dispatch services, load updates, appointment reminders, account
